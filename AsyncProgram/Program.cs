@@ -45,7 +45,11 @@ namespace AsyncProgram
             //ParallelSamples.TasksUsingThreadPool();
             //ParallelSamples.RunSynchronousTask();
             //ParallelSamples.TaskWithResultDemo();
-            ParallelSamples.ContinuationTasks();
+            //ParallelSamples.ContinuationTasks();
+            #endregion
+
+            #region 任务的层次结构，Task父类子类
+            TaskTest.ParentAndChild();
             #endregion
             Console.WriteLine("Main method");
             Console.WriteLine($"Main id : {Thread.CurrentThread.ManagedThreadId}");
