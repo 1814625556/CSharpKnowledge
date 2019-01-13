@@ -120,9 +120,15 @@ namespace AsyncProgram
 
         public static Task SayOk(string name)
         {
-            Task.Delay(1000);
+            //Task.Delay(10000);
             Console.WriteLine($"Hello {name}");
-            return null;
+            Console.ForegroundColor = System.ConsoleColor.Red;
+            Console.WriteLine($"SayOk:{System.Threading.Thread.CurrentThread.ManagedThreadId}");
+            return Task.Run(() =>
+            {
+                Console.WriteLine($"Task Run:{System.Threading.Thread.CurrentThread.ManagedThreadId}");
+                Console.ResetColor();
+            });
         }
     }
 }
