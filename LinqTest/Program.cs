@@ -3,15 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using static System.Console;
 
 namespace LinqTest
 {
     class Program
     {
+        public class PersonCCVV
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+        }
+
         static void Main(string[] args)
         {
-            SampleData();
+            //SampleData();
+            dynamic respon = JsonConvert.SerializeObject("{\"code\":0,\"message\":\"操作成功\",\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJoZXN0aWEiLCJleHAiOjE1NDkzNTY3OTIsInVzZXIiOiJLaXR0eSJ9.ueUyRuY8StFx3nf - yBeZZ_R4yOVKsfbf80DGhdRX2jM\"}}");
+            string token = respon.data.token;
+            Console.WriteLine(respon.data.token);
             Console.ReadKey();
         }
 

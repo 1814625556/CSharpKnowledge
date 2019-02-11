@@ -89,5 +89,12 @@ namespace WinFormTest
                 Environment.Exit(0);
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            var pen = new Pen(Color.FromArgb(217, 217, 217), 1);
+            var g = e.Graphics;
+            g.DrawRectangle(pen, 240, 165, 107, 30);
+        }
     }
 }
