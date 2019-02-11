@@ -59,14 +59,23 @@ namespace MutexTest
         {
             Console.WriteLine("{0} {1}", str, System.DateTime.Now);
         }
-        static void Main(string[] args)
+        /// <summary>
+        /// 入口方法
+        /// </summary>
+        static void Run1()
         {
             Program p = new Program();
             p.RunThread();
-            Console.ReadLine();
-            Console.ReadKey();
         }
 
+        static void Main(string[] args)
+        {
+            TestOne();
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// 入口方法
+        /// </summary>
         static void ProcessLock()
         {
             var flag = false;

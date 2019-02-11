@@ -9,8 +9,9 @@ namespace MutexTest
 {
     class shareRes
     {
+        public static bool flag = false;
         public static int count = 0;
-        public static Mutex mutex = new Mutex();
+        public static Mutex mutex = new Mutex(false,"cc",out flag);
     }
 
     class IncThread
@@ -42,6 +43,7 @@ namespace MutexTest
             Console.WriteLine(thrd.Name + "释放 the nmutex");
             //  释放
             shareRes.mutex.ReleaseMutex();
+            Console.WriteLine($"{thrd.Name}释放the mutex, flag:{shareRes.flag}");
         }
     }
 
@@ -74,6 +76,8 @@ namespace MutexTest
             Console.WriteLine(thrd.Name + "释放 the nmutex");
             //  释放
             shareRes.mutex.ReleaseMutex();
+            Console.WriteLine($"{thrd.Name}释放the mutex, flag:{shareRes.flag}");
+
         }
     }
 }

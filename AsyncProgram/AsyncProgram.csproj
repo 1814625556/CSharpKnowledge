@@ -45,9 +45,11 @@
     <Compile Include="AsyncException.cs" />
     <Compile Include="AsyncHelper.cs" />
     <Compile Include="ConsoleColor.cs" />
+    <Compile Include="MonitorTest.cs" />
     <Compile Include="ParallelSamples.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SemaphoreExample.cs" />
     <Compile Include="TaskTest.cs" />
   </ItemGroup>
   <ItemGroup>

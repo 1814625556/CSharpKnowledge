@@ -49,7 +49,17 @@ namespace AsyncProgram
             #endregion
 
             #region 任务的层次结构，Task父类子类
-            TaskTest.ParentAndChild();
+            //TaskTest.ParentAndChild();
+            #endregion
+
+            #region Semaphore,共享资源限制访问线程数量
+            //SemaphoreExample.Method();
+            #endregion
+
+            #region MonitorTest
+
+            MonitorTest.Test();
+
             #endregion
             Console.WriteLine("Main method");
             Console.WriteLine($"Main id : {Thread.CurrentThread.ManagedThreadId}");
