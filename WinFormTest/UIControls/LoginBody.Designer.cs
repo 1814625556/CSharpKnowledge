@@ -34,6 +34,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtPass = new System.Windows.Forms.TextBox();
+            this.LoginBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,10 +75,20 @@
             this.txtPass.Size = new System.Drawing.Size(100, 25);
             this.txtPass.TabIndex = 4;
             // 
+            // LoginBtn
+            // 
+            this.LoginBtn.Location = new System.Drawing.Point(153, 298);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(75, 23);
+            this.LoginBtn.TabIndex = 5;
+            this.LoginBtn.Text = "登录";
+            this.LoginBtn.UseVisualStyleBackColor = true;
+            // 
             // LoginBody
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
@@ -96,5 +107,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Button LoginBtn;
     }
 }

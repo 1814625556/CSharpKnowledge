@@ -24,7 +24,9 @@ namespace WinFormTest.UIControls
             //    entity= new LoginBodyEntity();
             viewModel = entity;
             this.txtName.DataBindings.Add("Text", viewModel, "Name",false, DataSourceUpdateMode.OnPropertyChanged);
-            this.txtPass.DataBindings.Add("Text", viewModel, "Password", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.txtPass.DataBindings.Add("Text", viewModel, "Password", false, DataSourceUpdateMode.OnPropertyChanged);//绑定属性
+            this.LoginBtn.Click += new EventHandler(viewModel.LoginBtn);//绑定事件
         }
+
     }
 }
