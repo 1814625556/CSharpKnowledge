@@ -42,8 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncDelegate.cs" />
     <Compile Include="AsyncException.cs" />
     <Compile Include="AsyncHelper.cs" />
+    <Compile Include="BarrierSample.cs" />
+    <Compile Include="Calculator.cs" />
     <Compile Include="ConsoleColor.cs" />
     <Compile Include="MonitorTest.cs" />
     <Compile Include="ParallelSamples.cs" />
@@ -51,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SemaphoreExample.cs" />
     <Compile Include="TaskTest.cs" />
+    <Compile Include="TaskTest2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

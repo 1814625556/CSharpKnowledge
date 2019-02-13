@@ -118,17 +118,24 @@ namespace AsyncProgram
             Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId}");
         }
 
-        public static Task SayOk(string name)
+        public static async Task SayOk(string name)
         {
-            //Task.Delay(10000);
+            Task.Delay(100).Wait();
             Console.WriteLine($"Hello {name}");
             Console.ForegroundColor = System.ConsoleColor.Red;
             Console.WriteLine($"SayOk:{System.Threading.Thread.CurrentThread.ManagedThreadId}");
-            return Task.Run(() =>
+            await Task.Run(() =>
             {
-                Console.WriteLine($"Task Run:{System.Threading.Thread.CurrentThread.ManagedThreadId}");
-                Console.ResetColor();
+                Task.Delay(100).Wait();
+                Console.WriteLine($"新开的任务。。。");
             });
+            Console.WriteLine($"Task Run:{System.Threading.Thread.CurrentThread.ManagedThreadId}");
+            Console.ResetColor();
+            //return Task.Run(() =>
+            //{
+            //    Console.WriteLine($"Task Run:{System.Threading.Thread.CurrentThread.ManagedThreadId}");
+            //    Console.ResetColor();
+            //});
         }
     }
 }

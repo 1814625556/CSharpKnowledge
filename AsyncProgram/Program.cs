@@ -25,6 +25,7 @@ namespace AsyncProgram
             //AsyncException.DontHandle();
             //AsyncException.ShowAggregateException();//获取task中的多个异常
             //CcTest();
+            AwaitTest();
 
             #region 委托的异步调用,fun beigininvoke endinvoke 其中beigin方法的返回结果就是end方法的输入参数，
             //end方法的放回结果就是 同步方法中的返回结果
@@ -58,12 +59,41 @@ namespace AsyncProgram
 
             #region MonitorTest
 
-            MonitorTest.Test();
+            //MonitorTest.Test();
 
             #endregion
+
+            #region AsyncDelegate测试
+
+            //AsyncDelegate.Test();
+
+            #endregion
+
+            //Calculator.Test();
+
+            #region 新的task
+
+            //TaskTest2.TestTaskId();
+            //TaskTest2.TaskContinueTest();
+            //TaskTest2.TaskWaitAny();
+            #endregion
+
             Console.WriteLine("Main method");
             Console.WriteLine($"Main id : {Thread.CurrentThread.ManagedThreadId}");
             Console.ReadKey();
+        }
+        /// <summary>
+        /// Task.Delay(3000).Wait()测试。
+        /// </summary>
+        public static void DelayWaitTest()
+        {
+            Task.Run(() =>
+            {
+                Console.WriteLine(DateTime.Now.Second);
+                Task.Delay(3000).Wait();//如果不调用Wait方法，就会直接执行下去。
+                Console.WriteLine(DateTime.Now.Second);
+                Console.WriteLine("task delay···");
+            });
         }
 
         public static async void CcTest()
@@ -71,6 +101,17 @@ namespace AsyncProgram
            await AsyncHelper.SayOk("ChenChang");
            Console.WriteLine("AAAAAA");
         }
+
+        public static async void AwaitTest()
+        {
+            await Task.Run(() =>
+            {
+                Task.Delay(100).Wait();
+                Console.WriteLine($"TaskId :{Task.CurrentId}");
+            });
+            Console.WriteLine("Finally");
+        }
+
         /// <summary>
         /// 取消自定义任务
         /// </summary>
@@ -81,7 +122,7 @@ namespace AsyncProgram
                 while (true)
                 {
                     Thread.Sleep(1000);
-                    _cts.Token.ThrowIfCancellationRequested();
+                    _cts.Token.ThrowIfCancellationRequested();//这段代码必须加上
                     Console.WriteLine($"TokenTest id :{Thread.CurrentThread.ManagedThreadId}");
                 }
             }, _cts.Token);
