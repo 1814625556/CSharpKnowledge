@@ -10,6 +10,14 @@ namespace Http
     {
         static void Main(string[] args)
         {
+            RunMethod();
+            Console.WriteLine("method is over...");
+            Console.ReadKey();
+        }
+
+        static async void RunMethod()
+        {
+            await HttpClientSample.HttpRequest11("","");
         }
     }
 }
