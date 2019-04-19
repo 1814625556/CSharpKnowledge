@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormTest", "WinFormTest\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncProgram", "AsyncProgram\AsyncProgram.csproj", "{B9F3DA27-D22F-4195-8293-4DF26E130305}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamTest", "StreamTest\StreamTest.csproj", "{A2E63F36-7BAD-4B00-9AB6-47108B1129B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B9F3DA27-D22F-4195-8293-4DF26E130305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9F3DA27-D22F-4195-8293-4DF26E130305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9F3DA27-D22F-4195-8293-4DF26E130305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E63F36-7BAD-4B00-9AB6-47108B1129B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E63F36-7BAD-4B00-9AB6-47108B1129B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E63F36-7BAD-4B00-9AB6-47108B1129B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E63F36-7BAD-4B00-9AB6-47108B1129B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
