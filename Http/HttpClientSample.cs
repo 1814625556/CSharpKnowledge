@@ -55,7 +55,12 @@ namespace Http
                 }
             }
         }
-
+        /// <summary>
+        /// httppost请求
+        /// </summary>
+        /// <param name="method"></param>
+        /// <param name="json"></param>
+        /// <returns></returns>
         public static async Task HttpRequest11(string method, string json)
         {
             try

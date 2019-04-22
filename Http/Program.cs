@@ -10,7 +10,9 @@ namespace Http
     {
         static void Main(string[] args)
         {
-            RunMethod();
+            //RunMethod();
+            //启动http服务器
+            HttpServer.StartServerAsync(new string[] { });
             Console.WriteLine("method is over...");
             Console.ReadKey();
         }
